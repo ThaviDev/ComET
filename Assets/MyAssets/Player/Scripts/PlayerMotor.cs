@@ -5,78 +5,73 @@ using UnityEngine;
 public class PlayerMotor : MonoBehaviour
 {
     [SerializeField]
-    private float moveSpeedOG;
+    private float _moveSpeedOG;
     [SerializeField]
-    private float moveSpeedRun;
-    private float presentSpeed;
-    private float axisX;// El valor X del jugador
-    private float axisY;// El valor Y del jugador
-    private bool actionInput;
-    private Animator anim;
-    private SpriteRenderer sprite;
+    private float _moveSpeedRun;
+    private float _presentSpeed;
+    private float _axisX;// El valor X del jugador
+    private float _axisY;// El valor Y del jugador
+    private bool _actionInput;
+    private bool _isMoving;
     private Rigidbody2D rb;
-    private AnimFloatEvent ungroundedScript; // Es el script que maneja los eventos de animacion cuando flota
-    
+    private AbilityMotor _abilMot;
+    [SerializeField] private AnimFloatEvent _ungroundedScript; // Es el script que maneja los eventos de animacion cuando flota
+
     void Start()
     {
-        anim = gameObject.transform.GetChild(0).GetComponent<Animator>();
-        sprite = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
-        ungroundedScript = gameObject.transform.GetChild(0).GetComponent<AnimFloatEvent>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+        _ungroundedScript = transform.GetChild(0).GetComponent<AnimFloatEvent>();
     }
 
     void Update()
     {
         //Logica de accion
-        actionInput = Input.GetButton("Jump");
-        if (actionInput)
-        {
-            anim.SetBool("IsActing", true);
-        } else
-        {
-            anim.SetBool("IsActing", false);
-        }
+        _actionInput = Input.GetButton("Jump");
         //Logica de correr
         //Solo puede correr cuando se mueva y no este flotando
-        if (actionInput && ungroundedScript.isFloating == false && anim.GetBool("IsMoving"))
+        if (_actionInput && _ungroundedScript.isFloating == false && _isMoving)
         {
-            anim.SetBool("IsRunning", true);
-            presentSpeed = moveSpeedRun;
+            _presentSpeed = _moveSpeedRun;
         }
         else
         {
-            presentSpeed = moveSpeedOG;
+            _presentSpeed = _moveSpeedOG;
         }
         //Deja de estar en el estado de correr cuando deja de presionar accion
         //PD: Puede estar en el estado de correr mientras este quieto,
         //esto es para que no empieze actuar mientras esta cambiando de direccion
-        if (!actionInput && anim.GetBool("IsRunning"))
-        {
-            anim.SetBool("IsRunning", false);
-        }
+
     }
 
     void FixedUpdate()
     {
         //Axis de movimiento
-        axisX = Input.GetAxisRaw("Horizontal");
-        axisY = Input.GetAxisRaw("Vertical");
-        Vector3 mov = new Vector3(axisX, axisY, 0f);
+        _axisX = Input.GetAxisRaw("Horizontal");
+        _axisY = Input.GetAxisRaw("Vertical");
+        Vector3 mov = new Vector3(_axisX, _axisY, 0f);
+
+        Debug.Log(mov);
 
         //transform.position = Vector3.MoveTowards(transform.position, transform.position + mov, movementSpeedIG * Time.deltaTime );
-        rb.MovePosition(Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y) + mov, presentSpeed * Time.deltaTime));
+        rb.MovePosition(Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y) + mov, _presentSpeed * Time.deltaTime));
         
-        if (Mathf.Abs(axisX) > 0.1 || Mathf.Abs(axisY) > 0.1) {
-            anim.SetBool("IsMoving", true);
+        if (Mathf.Abs(_axisX) > 0.1 || Mathf.Abs(_axisY) > 0.1) {
+            _isMoving = true;
         }
         else {
-            anim.SetBool("IsMoving", false);
+            _isMoving = false;
         }
-        if (axisX > 0) {
-            sprite.flipX = true;
-        }
-        else if (axisX < 0) {
-            sprite.flipX = false;
-        }
+    }
+    public float GetAxisX()
+    {
+        return _axisX;
+    }
+    public float GetAxisY()
+    {
+        return _axisY;
+    }
+    public bool GetActionInput()
+    {
+        return _actionInput;
     }
 }
