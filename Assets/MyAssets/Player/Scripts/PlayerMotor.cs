@@ -15,7 +15,18 @@ public class PlayerMotor : MonoBehaviour
     private bool _isMoving;
     private Rigidbody2D rb;
     private AbilityMotor _abilMot;
-    [SerializeField] private AnimFloatEvent _ungroundedScript; // Es el script que maneja los eventos de animacion cuando flota
+    private AnimFloatEvent _ungroundedScript;
+    /* Es el script que maneja los eventos de animacion cuando flota
+    * Esta ubicado en los eventos de la animacion
+    * */
+    [SerializeField] MyInputManager _inputMan;
+
+    // Inputs
+    bool _inputMoveRight;
+    bool _inputMoveLeft;
+    bool _inputMoveUp;
+    bool _inputMoveDown;
+    bool _inputInteract;
 
     void Start()
     {
@@ -25,6 +36,16 @@ public class PlayerMotor : MonoBehaviour
 
     void Update()
     {
+        _inputMoveRight = _inputMan.MoveRightButton;
+        _inputMoveLeft = _inputMan.MoveLeftButton;
+        _inputMoveUp = _inputMan.MoveUpButton; 
+        _inputMoveDown = _inputMan.MoveDownButton;
+        _inputInteract = _inputMan.InteractButton;
+
+        if (_inputInteract)
+        {
+            print("Estoy Presionando Interact");
+        }
         //Logica de accion
         _actionInput = Input.GetButton("Jump");
         //Logica de correr
