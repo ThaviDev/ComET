@@ -12,8 +12,10 @@ public class PlayerSlotPos : MonoBehaviour
     [SerializeField] float xMovementScale; // Default = 8f
     [SerializeField] float yMovementScale; // Default = 4.5f
 
-    // Que tanto debe de moverse el punto pivote virtual que representa el momento en el que cambia de slot
-    [SerializeField] float yOffscale;
+    // Escala Y offset: Mover el espacio de un slot hacia abajo
+    [SerializeField] float yOffScale;
+    // Que tanto debe de moverse el punto pivote virtual del jugador que representa el momento en el que cambia de slot
+    [SerializeField] float yBodyOffScale;
     // VirtualTrans representa la transformación espacial dentro de solo el espacio de un slot
     float pVirtualTransX;
     float pVirtualTransY;
@@ -29,7 +31,7 @@ public class PlayerSlotPos : MonoBehaviour
         // Por cada SlotPos necesita sumarse el transform actual con 8 si es X y 4.5 si es Y, el resultado es pVirtualTrans
 
         pVirtualTransX = transform.position.x - (pSlotPosX * xMovementScale);
-        pVirtualTransY = transform.position.y - (pSlotPosY * yMovementScale) + yOffscale;
+        pVirtualTransY = transform.position.y - (pSlotPosY * yMovementScale) + yOffScale + yBodyOffScale;
 
         if (pVirtualTransX > (xMovementScale/2) || pVirtualTransX < -(xMovementScale / 2) || pVirtualTransY > (yMovementScale/2) || pVirtualTransY < -(yMovementScale / 2))
         {
@@ -51,5 +53,13 @@ public class PlayerSlotPos : MonoBehaviour
             }
             pCameraMotor.changeCamPos(pSlotPosX, pSlotPosY, xMovementScale, yMovementScale);
         }
+
+        var realX = xMovementScale/2;
+        var realY = yMovementScale/2;
+
+        Debug.DrawLine(new Vector2(realX, realY - yOffScale), new Vector2(realX, -realY - yOffScale), Color.blue);
+        Debug.DrawLine(new Vector2(realX, -realY - yOffScale), new Vector2(-realX, -realY - yOffScale), Color.blue);
+        Debug.DrawLine(new Vector2(-realX, -realY - yOffScale), new Vector2(-realX, realY - yOffScale), Color.blue);
+        Debug.DrawLine(new Vector2(-realX, realY - yOffScale), new Vector2(realX, realY - yOffScale), Color.blue);
     }
 }

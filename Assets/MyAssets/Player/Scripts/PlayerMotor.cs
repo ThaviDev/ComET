@@ -9,24 +9,21 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField]
     private float _moveSpeedRun;
     private float _presentSpeed;
-    private float _axisX;// El valor X del jugador
-    private float _axisY;// El valor Y del jugador
-    private bool _actionInput;
     private bool _isMoving;
     private Rigidbody2D rb;
     private AbilityMotor _abilMot;
     private AnimFloatEvent _ungroundedScript;
     /* Es el script que maneja los eventos de animacion cuando flota
-    * Esta ubicado en los eventos de la animacion
+    * Esta ubicado en los eventos de la animacion en el hijo que se encarga de la animacion
     * */
     [SerializeField] MyInputManager _inputMan;
 
     // Inputs
-    bool _inputMoveRight;
-    bool _inputMoveLeft;
-    bool _inputMoveUp;
-    bool _inputMoveDown;
-    bool _inputInteract;
+    bool _inptMoveRight;
+    bool _inptMoveLeft;
+    bool _inptMoveUp;
+    bool _inptMoveDown;
+    bool _inptInteract;
 
     void Start()
     {
@@ -36,21 +33,21 @@ public class PlayerMotor : MonoBehaviour
 
     void Update()
     {
-        _inputMoveRight = _inputMan.MoveRightButton;
-        _inputMoveLeft = _inputMan.MoveLeftButton;
-        _inputMoveUp = _inputMan.MoveUpButton; 
-        _inputMoveDown = _inputMan.MoveDownButton;
-        _inputInteract = _inputMan.InteractButton;
+        _inptMoveRight = _inputMan.MoveRightButton;
+        _inptMoveLeft = _inputMan.MoveLeftButton;
+        _inptMoveUp = _inputMan.MoveUpButton;
+        _inptMoveDown = _inputMan.MoveDownButton;
+        _inptInteract = _inputMan.InteractButton;
 
-        if (_inputInteract)
+        if (_inptInteract)
         {
             print("Estoy Presionando Interact");
         }
         //Logica de accion
-        _actionInput = Input.GetButton("Jump");
+        //_actionInput = Input.GetButton("Jump");
         //Logica de correr
         //Solo puede correr cuando se mueva y no este flotando
-        if (_actionInput && _ungroundedScript.isFloating == false && _isMoving)
+        if (_inptInteract && _ungroundedScript.isFloating == false && _isMoving)
         {
             _presentSpeed = _moveSpeedRun;
         }
@@ -61,17 +58,20 @@ public class PlayerMotor : MonoBehaviour
         //Deja de estar en el estado de correr cuando deja de presionar accion
         //PD: Puede estar en el estado de correr mientras este quieto,
         //esto es para que no empieze actuar mientras esta cambiando de direccion
-
     }
 
     void FixedUpdate()
     {
         //Axis de movimiento
-        _axisX = Input.GetAxisRaw("Horizontal");
-        _axisY = Input.GetAxisRaw("Vertical");
+        //_axisX = Input.GetAxisRaw("Horizontal");
+        //_axisY = Input.GetAxisRaw("Vertical");
+        var _axisX = 0;
+        var _axisY = 0;
+        if (_inptMoveUp) { _axisY = 1; } else if (_inptMoveDown) {  _axisY = -1; } else { _axisY = 0; }
+        if (_inptMoveRight) { _axisX = 1; } else if (_inptMoveLeft) {  _axisX = -1; } else { _axisX = 0; }
         Vector3 mov = new Vector3(_axisX, _axisY, 0f);
 
-        Debug.Log(mov);
+        //Debug.Log(mov);
 
         //transform.position = Vector3.MoveTowards(transform.position, transform.position + mov, movementSpeedIG * Time.deltaTime );
         rb.MovePosition(Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y) + mov, _presentSpeed * Time.deltaTime));
@@ -82,17 +82,5 @@ public class PlayerMotor : MonoBehaviour
         else {
             _isMoving = false;
         }
-    }
-    public float GetAxisX()
-    {
-        return _axisX;
-    }
-    public float GetAxisY()
-    {
-        return _axisY;
-    }
-    public bool GetActionInput()
-    {
-        return _actionInput;
     }
 }
