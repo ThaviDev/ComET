@@ -319,6 +319,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: AbilityIcons-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd3103b86e7d4d41b0ec22c397d8595
+      internalID: -2023516483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -332,6 +353,8 @@ TextureImporter:
     nameFileIdTable:
       AbilityIcons-Sheet_0: -2070871417
       AbilityIcons-Sheet_1: -534527476
+      AbilityIcons-Sheet_10: -2023516483
+      AbilityIcons-Sheet_11: -984771609
       AbilityIcons-Sheet_2: -283832739
       AbilityIcons-Sheet_3: 1783986274
       AbilityIcons-Sheet_4: -1501604743
