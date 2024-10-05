@@ -17,6 +17,8 @@ public class PlayerMotor : MonoBehaviour
     * Esta ubicado en los eventos de la animacion en el hijo que se encarga de la animacion
     * */
     [SerializeField] MyInputManager _inputMan;
+    bool _frame1Ability; // 
+
 
     // Inputs
     bool _inptMoveRight;
@@ -29,8 +31,8 @@ public class PlayerMotor : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         _ungroundedScript = transform.GetChild(0).GetComponent<AnimFloatEvent>();
+        _abilMot = gameObject.GetComponent<AbilityMotor>();
     }
-
     void Update()
     {
         _inptMoveRight = _inputMan.MoveRightButton;
@@ -39,10 +41,22 @@ public class PlayerMotor : MonoBehaviour
         _inptMoveDown = _inputMan.MoveDownButton;
         _inptInteract = _inputMan.InteractButton;
 
-        if (_inptInteract)
+        // Interaccion de abilidad
+        if (_ungroundedScript.isFloating && _frame1Ability == true)
         {
-            print("Estoy Presionando Interact");
+            _frame1Ability = false;
+            _abilMot.ActivateAbility();
         }
+        if (!_ungroundedScript.isFloating)
+        {
+            _frame1Ability = true;
+        }
+
+        //if (_inptInteract)
+        //{
+            //_abilMot.ActivateAbility();
+            //print("Estoy Presionando Interact");
+        //}
         //Logica de accion
         //_actionInput = Input.GetButton("Jump");
         //Logica de correr
