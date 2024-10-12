@@ -6,9 +6,24 @@ public class AbilityMotor : MonoBehaviour
 {
     [SerializeField] AreaAbilDetection _myAreaDet;
     [SerializeField] PlayerMotor _playerMotor;
+    /*
     [Header("GameObjects que aparecen en ciertas habilidades:")]
-    [SerializeField] List<GameObject> _abilObj;
+    [SerializeField] List<GameObject> _abilObj; */
 
+    public bool GetIsOnArea
+    {
+        get { return _myAreaDet.myAreaInteraction.isOnArea; }
+    }
+
+    public AreaInteraction GetCurrentArea
+    {
+        get { return _myAreaDet.myAreaInteraction; }
+    }
+
+    public int GetAbilityType
+    {
+        get { return _myAreaDet.myAreaInteraction.abilType; }
+    }
     private void Awake()
     {
         if (_myAreaDet == null)
@@ -53,32 +68,64 @@ public class AbilityMotor : MonoBehaviour
                 print("Teletransportacion arriba");
                 _playerMotor.gameObject.transform.position = new Vector3(myVec.x, myVec.y + 5);
                 break;
-            case 1: // Teletransportar abajo
+            case 1: // Teletransportar izquierda
                 print("Teletransportacion abajo");
-                _playerMotor.gameObject.transform.position = new Vector3(myVec.x, myVec.y + -5);
-                break;
-            case 2: // Teletransportar izquierda
-                print("Teletransportacion izquierda");
                 _playerMotor.gameObject.transform.position = new Vector3(myVec.x + -9, myVec.y);
+                break;
+            case 2: // Teletransportar abajo
+                print("Teletransportacion izquierda");
+                _playerMotor.gameObject.transform.position = new Vector3(myVec.x, myVec.y + -5);
                 break;
             case 3: // Teletransportar derecha
                 print("Teletransportacion derecha");
                 _playerMotor.gameObject.transform.position = new Vector3(myVec.x + 9, myVec.y);
                 break;
-            case 4: // Hipnosis adultos
-                print("Hipnosis adultos");
+            case 4: // Llamar Felix
+                print("Llamar Felix");
                 break;
-            case 5: // Llamar a Felix
-                print("Llamar a Felix");
+            case 5: // Ubicar Pieza
+                print("Ubicar Pieza");
                 break;
             case 6: // Comer Dulce
                 print("Comer Dulce");
                 break;
-            case 7: // Ubicar Pieza de telefono
-                print("Ubicar Pieza de telefono");
+            case 7: // Hipnosis Adultos
+                print("Hipnosis Adultos");
                 break;
-            case 8: // Llamar nave de regreso
+            case 8: // Llamar Nave de regreso
                 print("Llamar Nave de regreso");
+                break;
+            case 9: // Lugar de aterrizaje
+                // En este caso no se hace realmente nada pero es necesario tenerlo
+                // como ID para el UI Manager, igual puede ser util para otra cosa
+                print("Lugar de aterrizaje");
+                break;
+            case 10: // Ver Iconos de habilidades
+                print("Ver Iconos de habilidades");
+                break;
+            case 11: // Volverse Intangible
+                print("Volverse Intangible");
+                break;
+            case 12: // Energía Infinita
+                print("Energía Infinita");
+                break;
+            case 13: // Congelamiento
+                print("Congelamiento");
+                break;
+            case 14: // Gigantismo
+                print("Gigantismo");
+                break;
+            case 15: // Llenar hoyos
+                print("Llenar hoyos");
+                break;
+            case 16: // Super Caliente
+                print("Super Caliente");
+                break;
+            case 17: // Seniuelo
+                print("Seniuelo");
+                break;
+            case 18: // Campo de proteccion
+                print("Campo de proreccion");
                 break;
             default:
                 break;

@@ -21,6 +21,15 @@ public class PlayerSlotPos : MonoBehaviour
     float pVirtualTransY;
     CameraMotor pCameraMotor;
 
+    public int GetSlotPosX 
+    { 
+        get { return pSlotPosX; } 
+    }
+    public int GetSlotPosY
+    {
+        get { return pSlotPosY; }
+    }
+
     private void Start()
     {
         pCameraMotor = Camera.main.GetComponent<CameraMotor>();
