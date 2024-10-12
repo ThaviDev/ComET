@@ -2829,7 +2829,7 @@ Transform:
   m_GameObject: {fileID: 652376781}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.34, z: 0}
+  m_LocalPosition: {x: 0, y: 1.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6611,6 +6611,7 @@ MonoBehaviour:
   _moveSpeedRun: 4.5
   _inputMan: {fileID: 2095325624}
   _spawnPosHole: {fileID: 652376782}
+  _myHoleTrigger: {fileID: 577285390}
 --- !u!114 &1962961708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6780,6 +6781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2040631849}
   - component: {fileID: 2040631850}
+  - component: {fileID: 2040631851}
   m_Layer: 0
   m_Name: FloorCol
   m_TagString: Untagged
@@ -6847,6 +6849,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.1876678, y: 0.65893555}
   m_EdgeRadius: 0
+--- !u!114 &2040631851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040631848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da126038a18e3194cbb17fc7fa0a23d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2041908389
 GameObject:
   m_ObjectHideFlags: 0
@@ -7259,6 +7273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2114421790}
   - component: {fileID: 2114421791}
+  - component: {fileID: 2114421792}
   m_Layer: 0
   m_Name: Ceiling Trigger
   m_TagString: Untagged
@@ -7313,7 +7328,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0064315796, y: 0.19181633}
+  m_Offset: {x: 0.0018672943, y: 0.7892742}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7324,8 +7339,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.0644608, y: 0.59566116}
+  m_Size: {x: 4.807041, y: 1.7905769}
   m_EdgeRadius: 0
+--- !u!114 &2114421792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114421789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9943769a418764cb4e3e2ec23a1fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waitTime: 1
 --- !u!1 &2119506532
 GameObject:
   m_ObjectHideFlags: 0

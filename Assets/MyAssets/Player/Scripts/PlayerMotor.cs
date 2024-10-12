@@ -20,6 +20,7 @@ public class PlayerMotor : MonoBehaviour
     bool _frame1Ability; // 
     private Vector3 _fallenHolePos;
     [SerializeField] Transform _spawnPosHole;
+    [SerializeField] Collider2D _myHoleTrigger;
 
 
     // Inputs
@@ -75,6 +76,14 @@ public class PlayerMotor : MonoBehaviour
         //Deja de estar en el estado de correr cuando deja de presionar accion
         //PD: Puede estar en el estado de correr mientras este quieto,
         //esto es para que no empieze actuar mientras esta cambiando de direccion
+
+        if (!_ungroundedScript.isFloating)
+        {
+            _myHoleTrigger.enabled = true;
+        } else
+        {
+            _myHoleTrigger.enabled = false;
+        }
     }
     bool isPlayerOnHole;
     void FixedUpdate()
@@ -93,23 +102,12 @@ public class PlayerMotor : MonoBehaviour
         }
 
     }
-
-    bool isFalling;
     private void PlayerInHole() {
         HorizontalMovement();
         if (_ungroundedScript.isFloating)
         {
             FreeMovement();
         }
-        /*
-        if (!isFalling)
-        {
-        }
-        else
-        {
-            // Si cae no puede moverse
-        }*/
-
     }
     private void PlayerInWorld()
     {
@@ -119,8 +117,11 @@ public class PlayerMotor : MonoBehaviour
         //_axisY = Input.GetAxisRaw("Vertical");
     }
 
+    bool restartYVelocity;
     private void FreeMovement()
     {
+        // este bool sirve para que no aumente la velocidad de la gravedad cambiando de free movement a horizontal movement
+        restartYVelocity = true;
         rb.gravityScale = 0;
 
         var _axisX = 0;
@@ -150,7 +151,14 @@ public class PlayerMotor : MonoBehaviour
 
     private void HorizontalMovement()
     {
-        rb.gravityScale = 1;
+        if (restartYVelocity)
+        {
+            Vector3 _vel = rb.velocity;
+            _vel.y = 0;
+            rb.velocity = _vel;
+            restartYVelocity = false;
+        }
+        rb.gravityScale = 1f;
 
         var _axisX = 0;
         // Detector de Inputs
@@ -202,6 +210,10 @@ public class PlayerMotor : MonoBehaviour
         // Si el jugador esta en hoyo, esta cayendo y la colision tiene cierto script, entonces podemos cambiar de caer a no caer
         // Incluso detonar el quitar energia
         // Podria tomarse en cuenta la posibilidad de contar el tiempo de vuelo para la cantidad de energia que se pierde
+        if (col.gameObject.transform.GetComponent<CeilingTrigger>())
+        {
+            // Detonar evento de regresar a la superficie
+        }
 
     }
 }
