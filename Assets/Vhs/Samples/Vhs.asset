@@ -15,7 +15,7 @@ MonoBehaviour:
   active: 1
   _weight:
     m_OverrideState: 1
-    m_Value: 0.175
+    m_Value: 0.23
   _bleed:
     m_OverrideState: 1
     m_Value: 0.45

@@ -4,41 +4,70 @@ using UnityEngine;
 
 public class CameraMotor : MonoBehaviour
 {
-    //[SerializeField] private int camSlotPosX; // La posicion del la camara en el mapa del juego
-    //[SerializeField] private int camSlotPosY; // La posicion del la camara en el mapa del juego
-    //Vector3 myPos;
-    void Start()
-    { 
-        //myPos = transform.position;
+    // Determina la escala de la pantalla virtual
+    float _xMovementScale; // Default = 8f
+    float _yMovementScale; // Default = 4.5f
 
+    int _slotPosX;
+    int _slotPosY;
+
+    // Informacion que se guarda del ultimo slot pos
+    int _lastSlotX;
+    int _lastSlotY;
+
+    [SerializeField] int _holeSlotX;
+    [SerializeField] int _holeSlotY;
+
+    [SerializeField] PlayerSlotPos _playerSlot;
+
+    [SerializeField] float _waitForTeleport; // Este es para desactivar el movimiento de PlayerSlotPos y dejar la teletransportacion
+    void Start()
+    {
+        _xMovementScale = _playerSlot.GetXMovementScale;
+        _yMovementScale = _playerSlot.GetYMovementScale;
+        _slotPosX = _playerSlot.GetSlotPosX;
+        _slotPosY = _playerSlot.GetSlotPosY;
+        MyGameManager.HoleFallEvent += GoToHole;
+        MyGameManager.HoleClimbEvent += ReturnToSurface;
     }
 
     void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.V))
+        if (_waitForTeleport > 0)
         {
-            changeCamPos();
+            _waitForTeleport -=  Time.deltaTime;
+            _playerSlot.SetCanChange = false;
+        } else
+        {
+            _playerSlot.SetCanChange = true;
         }
-        */
-        /*
-        myPos.x = camSlotPosX * 8;
-        myPos.y = camSlotPosY * 4.5f;
-        transform.position = myPos;
-        */
-
     }
 
-    public void changeCamPos(int newCamSlotX, int newCamSlotY, float newXMovementScale, float newYMovementScale)
+    private void GoToHole(Vector3 pPos)
     {
-        //camSlotPosX = newCamSlotX;
-        //camSlotPosY = newCamSlotY;
-        // Se crea un nuevo Vector3
-        var myPos = transform.position;
-        // Se igualan los puntos de X y Y a la posicion de los slots por la escala virtual del movimiento dentro de estos
-        myPos.x = newCamSlotX * newXMovementScale;
-        myPos.y = newCamSlotY * newYMovementScale;
-        // La nueva posicion es ese Vector3
-        transform.position = myPos;
+        _waitForTeleport = 0.2f;
+        _lastSlotX = _slotPosX;
+        _lastSlotY = _slotPosY;
+
+        changeCamPos(_holeSlotX, _holeSlotY);
     }
+
+    private void ReturnToSurface()
+    {
+        _waitForTeleport = 0.2f;
+        changeCamPos(_lastSlotX,_lastSlotY);
+    }
+
+    public void changeCamPos(int _newCamSlotX, int _newCamSlotY)
+    {
+        // Se crea un nuevo Vector3
+        var _myPos = transform.position;
+        // Se igualan los puntos de X y Y a la posicion de los slots por la escala virtual del movimiento dentro de estos
+        _myPos.x = _newCamSlotX * _xMovementScale;
+        _myPos.y = _newCamSlotY * _yMovementScale;
+        // La nueva posicion es ese Vector3
+        transform.position = _myPos;
+    }
+
+
 }

@@ -20,7 +20,12 @@ public class PlayerSlotPos : MonoBehaviour
     float pVirtualTransX;
     float pVirtualTransY;
     CameraMotor pCameraMotor;
+    bool _canChange;
 
+    public bool SetCanChange
+    {
+        get { return _canChange; } set { _canChange = value; }
+    }
     public int GetSlotPosX 
     { 
         get { return pSlotPosX; } 
@@ -28,6 +33,15 @@ public class PlayerSlotPos : MonoBehaviour
     public int GetSlotPosY
     {
         get { return pSlotPosY; }
+    }
+
+    public float GetXMovementScale
+    {
+        get { return xMovementScale; }
+    }
+    public float GetYMovementScale
+    {
+        get { return yMovementScale; }
     }
 
     private void Start()
@@ -60,7 +74,10 @@ public class PlayerSlotPos : MonoBehaviour
             {
                 pSlotPosY -= 1;
             }
-            pCameraMotor.changeCamPos(pSlotPosX, pSlotPosY, xMovementScale, yMovementScale);
+            if (_canChange)
+            {
+                pCameraMotor.changeCamPos(pSlotPosX, pSlotPosY);
+            }
         }
 
         var realX = xMovementScale/2;

@@ -9,13 +9,14 @@ public class UI_GameManager : MonoBehaviour
     [Header("Elementos UI")]
     [SerializeField] Slider[] _energySliders;
     [SerializeField] Slider[] _abilitiesSlider;
-    [SerializeField] Image _topIcon;
+    //[SerializeField] Image _topIcon;
     [SerializeField] Slider _timeSliderFast;
     [SerializeField] Slider _timeSliderSlow;
     [SerializeField] TMP_Text _candyText;
     [SerializeField] Slider _phoneSlider;
     [Header("Variables")]
-    [SerializeField] Sprite[] _topIconSprites;
+    [SerializeField] GameObject[] _topIconObj;
+    [SerializeField] RectTransform _topTrans;
     /* 0: Nada
      * 1: teletransportacion 2: Hipnosis 3: Llamar Felix
      * 4: Comer Dulce 5: Encontrar Pieza 6: Llamar a casa
@@ -32,6 +33,10 @@ public class UI_GameManager : MonoBehaviour
 
 
         CalculateEnergyToBar(_pEnergy);
+    }
+
+    private void FixedUpdate()
+    {
         CalculateCurrentTopIcon();
     }
 
@@ -43,17 +48,40 @@ public class UI_GameManager : MonoBehaviour
 
         if (_currentArea == null)
         {
-            _topIcon.sprite = _topIconSprites[19];
+            DestroyTopIcon();
+            //_topIcon.sprite = _topIconSprites[19];w
             return;
         }
 
         if (_isOnArea)
         {
-            _topIcon.sprite = _topIconSprites[_iD_Icon];
+            CreateTopIcon(_iD_Icon);
+            //_topIcon.sprite = _topIconSprites[_iD_Icon];
         }
         else
         {
-            _topIcon.sprite = _topIconSprites[19];
+            DestroyTopIcon();
+            //_topIcon.sprite = _topIconSprites[19];
+        }
+    }
+
+    void CreateTopIcon(int _iconID)
+    {
+        DestroyTopIcon();
+        var myInstance = Instantiate(_topIconObj[_iconID],_topTrans);
+        Vector3 nuevaPos = myInstance.transform.position;
+        //nuevaPos.y = 0;
+        myInstance.transform.position = nuevaPos;
+    }
+
+    void DestroyTopIcon()
+    {
+        if (_topTrans.childCount > 0)
+        {
+            foreach (RectTransform child in _topTrans)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
         }
     }
 

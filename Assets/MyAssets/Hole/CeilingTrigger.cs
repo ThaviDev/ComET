@@ -12,7 +12,7 @@ public class CeilingTrigger : MonoBehaviour
         _collider = GetComponent<Collider2D>();
         MyGameManager.HoleFallEvent += WaitTrigger;
     }
-    private void WaitTrigger(Vector3 Vec1, Vector2 Vec2)
+    private void WaitTrigger(Vector3 VecP)
     {
         _currWaitTime = _waitTime;
     }
@@ -26,5 +26,13 @@ public class CeilingTrigger : MonoBehaviour
             _collider.enabled = true;
         }
         //print(_currWaitTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.GetComponent<PlayerMotor>())
+        {
+            MyGameManager.Instance.HoleClimbEventTrigger();
+        }
     }
 }

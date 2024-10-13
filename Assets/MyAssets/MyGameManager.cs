@@ -7,7 +7,8 @@ public class MyGameManager : MonoBehaviour
 {
     private static MyGameManager _instance;
     // Evento cuando el jugador cae en un hoyo
-    public static Action<Vector3,Vector2> HoleFallEvent;
+    public static Action<Vector3> HoleFallEvent;
+    public static Action HoleClimbEvent;
     public static MyGameManager Instance
     {
         get
@@ -43,8 +44,13 @@ public class MyGameManager : MonoBehaviour
         }
     }
 
-    public void HoleFallEventTrigger(Vector3 ogPos,Vector2 slotPos) // Detonado por Hole Motor
+    public void HoleFallEventTrigger(Vector3 ogPos) // Detonado por Hole Motor
     {
-        HoleFallEvent(ogPos,slotPos);
+        HoleFallEvent(ogPos);
+    }
+
+    public void HoleClimbEventTrigger()
+    {
+        HoleClimbEvent();
     }
 }

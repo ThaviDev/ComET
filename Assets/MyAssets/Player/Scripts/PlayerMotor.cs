@@ -36,6 +36,7 @@ public class PlayerMotor : MonoBehaviour
         _ungroundedScript = transform.GetChild(0).GetComponent<AnimFloatEvent>();
         _abilMot = gameObject.GetComponent<AbilityMotor>();
         MyGameManager.HoleFallEvent += PlayerFellInHole;
+        MyGameManager.HoleClimbEvent += PlayerClimedHole;
     }
     void Update()
     {
@@ -196,12 +197,21 @@ public class PlayerMotor : MonoBehaviour
     }
 
     // Suscrito a evento de Game Manager
-    private void PlayerFellInHole(Vector3 HolePos, Vector2 OgSlotPos)
+    private void PlayerFellInHole(Vector3 HolePos)
     {
+        // este bool sirve para que no aumente la velocidad de la gravedad cambiando de free movement a horizontal movement
+        restartYVelocity = true;
         // Se guarda la informacion del hoyo caido
         _fallenHolePos = HolePos;
         isPlayerOnHole = true;
         transform.position = _spawnPosHole.position;
+    }
+
+    // Suscrito a evento de Game Manager
+    private void PlayerClimedHole()
+    {
+        transform.position = _fallenHolePos;
+        isPlayerOnHole = false;
     }
 
     private void OnCollisionEnter2D(Collision2D col)
