@@ -9,14 +9,13 @@ public class UI_GameManager : MonoBehaviour
     [Header("Elementos UI")]
     [SerializeField] Slider[] _energySliders;
     [SerializeField] Slider[] _abilitiesSlider;
-    //[SerializeField] Image _topIcon;
+    [SerializeField] Image _topIcon;
     [SerializeField] Slider _timeSliderFast;
     [SerializeField] Slider _timeSliderSlow;
     [SerializeField] TMP_Text _candyText;
     [SerializeField] Slider _phoneSlider;
     [Header("Variables")]
-    [SerializeField] GameObject[] _topIconObj;
-    [SerializeField] RectTransform _topTrans;
+    [SerializeField] Sprite[] _topIconSprites;
     /* 0: Nada
      * 1: teletransportacion 2: Hipnosis 3: Llamar Felix
      * 4: Comer Dulce 5: Encontrar Pieza 6: Llamar a casa
@@ -33,10 +32,6 @@ public class UI_GameManager : MonoBehaviour
 
 
         CalculateEnergyToBar(_pEnergy);
-    }
-
-    private void FixedUpdate()
-    {
         CalculateCurrentTopIcon();
     }
 
@@ -48,40 +43,17 @@ public class UI_GameManager : MonoBehaviour
 
         if (_currentArea == null)
         {
-            DestroyTopIcon();
-            //_topIcon.sprite = _topIconSprites[19];w
+            _topIcon.sprite = _topIconSprites[19];
             return;
         }
 
         if (_isOnArea)
         {
-            CreateTopIcon(_iD_Icon);
-            //_topIcon.sprite = _topIconSprites[_iD_Icon];
+            _topIcon.sprite = _topIconSprites[_iD_Icon];
         }
         else
         {
-            DestroyTopIcon();
-            //_topIcon.sprite = _topIconSprites[19];
-        }
-    }
-
-    void CreateTopIcon(int _iconID)
-    {
-        DestroyTopIcon();
-        var myInstance = Instantiate(_topIconObj[_iconID],_topTrans);
-        Vector3 nuevaPos = myInstance.transform.position;
-        //nuevaPos.y = 0;
-        myInstance.transform.position = nuevaPos;
-    }
-
-    void DestroyTopIcon()
-    {
-        if (_topTrans.childCount > 0)
-        {
-            foreach (RectTransform child in _topTrans)
-            {
-                GameObject.Destroy(child.gameObject);
-            }
+            _topIcon.sprite = _topIconSprites[19];
         }
     }
 
@@ -90,13 +62,14 @@ public class UI_GameManager : MonoBehaviour
         int[] _barras = new int[4];
         int _virtualEnergy = _myEnergy;
 
-        for (int i = 0; i <_barras.Length; i++)
+        for (int i = 0; i < _barras.Length; i++)
         {
             if (_virtualEnergy >= _energySliders[i].maxValue)
             {
                 _barras[i] = (int)_energySliders[i].maxValue;
                 _virtualEnergy -= (int)_energySliders[i].maxValue;
-            } else
+            }
+            else
             {
                 _barras[i] = _virtualEnergy;
                 _virtualEnergy = 0;
