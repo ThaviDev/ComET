@@ -1,0 +1,984 @@
+fileFormatVersion: 2
+guid: 73de456236fb9ab41a7e68036aef19bd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 25
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638648534342386017
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: ComETCharacters_Frame_0
+    originalName: 
+    pivot: {x: 0.42857146, y: -0.29411766}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 171
+      width: 14
+      height: 17
+    spriteID: c8569ae97f2991c4798eca24d9a24543
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 171}
+  - name: ComETCharacters_Frame_1
+    originalName: 
+    pivot: {x: 0.54545456, y: -0.29411766}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 213
+      width: 11
+      height: 17
+    spriteID: 7ab2861d7e4fc1747b2d9ffe9fbc34e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 213}
+  - name: ComETCharacters_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 52
+      width: 14
+      height: 15
+    spriteID: 5c2a2c6da6869b445a6cf6bdc3873e95
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 52}
+  - name: ComETCharacters_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 75
+      width: 14
+      height: 15
+    spriteID: a6c998c28ea9c1c41975837727b8b787
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 75}
+  - name: ComETCharacters_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.3125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 4
+      width: 14
+      height: 16
+    spriteID: 71be4d52a26f8df4b9674e14f200fb9f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 4}
+  - name: ComETCharacters_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -0.29411766}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 196
+      width: 14
+      height: 17
+    spriteID: c63f9cbdc2a68194c97180d59d40054b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 196}
+  - name: ComETCharacters_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: -0.2631579}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 14
+      height: 19
+    spriteID: 87b032253bc9e5a4db6fb1f8b3163d8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: ComETCharacters_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: -0.2631579}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 31
+      width: 14
+      height: 19
+    spriteID: 7143ae936d7166e41a4fd7720727ce7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 31}
+  - name: ComETCharacters_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -0.2631579}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 58
+      width: 14
+      height: 19
+    spriteID: 298d0b144a38b654395a7495985de071
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 58}
+  - name: ComETCharacters_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.2777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 115
+      width: 14
+      height: 18
+    spriteID: ccd8cacdcf6ec7b4f8536860ba72af6d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 115}
+  - name: ComETCharacters_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: -0.29411766}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 221
+      width: 14
+      height: 17
+    spriteID: 1f573e7477bdd074893c5f59f0303f6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 221}
+  - name: ComETCharacters_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: -0.3125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 28
+      width: 14
+      height: 16
+    spriteID: ca6cb8c9fe49b3f4ebd9b618536e9fe8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 28}
+  - name: ComETCharacters_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 98
+      width: 14
+      height: 15
+    spriteID: ebe19a189c37c7c41a07dc71c3b90932
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 98}
+  - name: ComETCharacters_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 121
+      width: 14
+      height: 15
+    spriteID: 14fbf64a9fdc4224d9db5ede7eeb5e34
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 121}
+  - name: ComETCharacters_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 144
+      width: 14
+      height: 15
+    spriteID: b89fa41a93d77134d9f6962dc4706884
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 144}
+  - name: ComETCharacters_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 167
+      width: 14
+      height: 15
+    spriteID: 7dfccb133d7ca2d42834635321498b8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 167}
+  - name: ComETCharacters_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 190
+      width: 14
+      height: 15
+    spriteID: c6b18d3583b61b44e82dde7ad436e680
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 190}
+  - name: ComETCharacters_Frame_17
+    originalName: 
+    pivot: {x: 0.54545456, y: -0.22727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 141
+      width: 11
+      height: 22
+    spriteID: c0a484f3aabab534fba5186f631da0a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 141}
+  - name: ComETCharacters_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: -0.22727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 85
+      width: 12
+      height: 22
+    spriteID: 9a13d9e8611b1a44ebac0f260d901dab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 85}
+  - name: ComETCharacters_Frame_19
+    originalName: 
+    pivot: {x: 0.42857146, y: -0.2857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 62
+      width: 7
+      height: 21
+    spriteID: 8ac6039b7302c994d9df84f8e7013994
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 62}
+  - name: ComETCharacters_Frame_20
+    originalName: 
+    pivot: {x: 0.42857146, y: -0.2857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 91
+      width: 7
+      height: 21
+    spriteID: 8eb132915fd1be442918d60562439a3e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 91}
+  - name: ComETCharacters_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: -0.2857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 4
+      width: 8
+      height: 21
+    spriteID: 90a349ef9a53ecd4385eb47c0d4022ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 4}
+  - name: ComETCharacters_Frame_22
+    originalName: 
+    pivot: {x: 0.5714286, y: -0.2857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 120
+      width: 7
+      height: 21
+    spriteID: 76d3ed3f4deb5864cbe7b1a8c4f6c076
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 120}
+  - name: ComETCharacters_Frame_23
+    originalName: 
+    pivot: {x: 0.42857146, y: -0.2857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 149
+      width: 7
+      height: 21
+    spriteID: 7bdf04b42e3cad046afec56aacccabb0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 149}
+  - name: ComETCharacters_Frame_24
+    originalName: 
+    pivot: {x: 0.42857146, y: -0.2857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 178
+      width: 7
+      height: 21
+    spriteID: 9c29e78d8619db646933a81eb434ead9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 178}
+  - name: ComETCharacters_Frame_25
+    originalName: 
+    pivot: {x: 0.42857146, y: -0.2857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 207
+      width: 7
+      height: 21
+    spriteID: bfec95f68893d0f47bf5c4ae9a043866
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 207}
+  - name: ComETCharacters_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: -0.2857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 33
+      width: 8
+      height: 21
+    spriteID: c2a2ce80d4d66df4981f1bcd80630936
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 33}
+  - name: ComETCharacters_Frame_27
+    originalName: 
+    pivot: {x: 0.5714286, y: -0.2857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 4
+      width: 7
+      height: 21
+    spriteID: 35b8d7ce5e415db4cb233c1a7333d68a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 64, y: 4}
+  - name: ComETCharacters_Frame_28
+    originalName: 
+    pivot: {x: 0.42857146, y: -0.2857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 33
+      width: 7
+      height: 21
+    spriteID: d245ce73bbabd7c41922689a0b43c594
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 64, y: 33}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1354757990
+    name: ComETCharacters
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: ComETCharacters_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 10
+        y: 5
+        width: 14
+        height: 17
+      spriteId: c8569ae97f2991c4798eca24d9a24543
+    - name: ComETCharacters_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 10
+        y: 5
+        width: 11
+        height: 17
+      spriteId: 7ab2861d7e4fc1747b2d9ffe9fbc34e0
+    - name: ComETCharacters_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 15
+      spriteId: 5c2a2c6da6869b445a6cf6bdc3873e95
+    - name: ComETCharacters_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 15
+      spriteId: a6c998c28ea9c1c41975837727b8b787
+    - name: ComETCharacters_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 16
+      spriteId: 71be4d52a26f8df4b9674e14f200fb9f
+    - name: ComETCharacters_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 17
+      spriteId: c63f9cbdc2a68194c97180d59d40054b
+    - name: ComETCharacters_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 19
+      spriteId: 87b032253bc9e5a4db6fb1f8b3163d8c
+    - name: ComETCharacters_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 19
+      spriteId: 7143ae936d7166e41a4fd7720727ce7b
+    - name: ComETCharacters_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 19
+      spriteId: 298d0b144a38b654395a7495985de071
+    - name: ComETCharacters_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 18
+      spriteId: ccd8cacdcf6ec7b4f8536860ba72af6d
+    - name: ComETCharacters_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 17
+      spriteId: 1f573e7477bdd074893c5f59f0303f6c
+    - name: ComETCharacters_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 16
+      spriteId: ca6cb8c9fe49b3f4ebd9b618536e9fe8
+    - name: ComETCharacters_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 15
+      spriteId: ebe19a189c37c7c41a07dc71c3b90932
+    - name: ComETCharacters_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 15
+      spriteId: 14fbf64a9fdc4224d9db5ede7eeb5e34
+    - name: ComETCharacters_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 15
+      spriteId: b89fa41a93d77134d9f6962dc4706884
+    - name: ComETCharacters_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 15
+      spriteId: 7dfccb133d7ca2d42834635321498b8f
+    - name: ComETCharacters_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 9
+        y: 5
+        width: 14
+        height: 15
+      spriteId: c6b18d3583b61b44e82dde7ad436e680
+    - name: ComETCharacters_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 10
+        y: 5
+        width: 11
+        height: 22
+      spriteId: c0a484f3aabab534fba5186f631da0a1
+    - name: ComETCharacters_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 10
+        y: 5
+        width: 12
+        height: 22
+      spriteId: 9a13d9e8611b1a44ebac0f260d901dab
+    - name: ComETCharacters_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 13
+        y: 6
+        width: 7
+        height: 21
+      spriteId: 8ac6039b7302c994d9df84f8e7013994
+    - name: ComETCharacters_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 13
+        y: 6
+        width: 7
+        height: 21
+      spriteId: 8eb132915fd1be442918d60562439a3e
+    - name: ComETCharacters_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 12
+        y: 6
+        width: 8
+        height: 21
+      spriteId: 90a349ef9a53ecd4385eb47c0d4022ba
+    - name: ComETCharacters_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 12
+        y: 6
+        width: 7
+        height: 21
+      spriteId: 76d3ed3f4deb5864cbe7b1a8c4f6c076
+    - name: ComETCharacters_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 13
+        y: 6
+        width: 7
+        height: 21
+      spriteId: 7bdf04b42e3cad046afec56aacccabb0
+    - name: ComETCharacters_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 13
+        y: 6
+        width: 7
+        height: 21
+      spriteId: 9c29e78d8619db646933a81eb434ead9
+    - name: ComETCharacters_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 13
+        y: 6
+        width: 7
+        height: 21
+      spriteId: bfec95f68893d0f47bf5c4ae9a043866
+    - name: ComETCharacters_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 12
+        y: 6
+        width: 8
+        height: 21
+      spriteId: c2a2ce80d4d66df4981f1bcd80630936
+    - name: ComETCharacters_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 12
+        y: 6
+        width: 7
+        height: 21
+      spriteId: 35b8d7ce5e415db4cb233c1a7333d68a
+    - name: ComETCharacters_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 13
+        y: 6
+        width: 7
+        height: 21
+      spriteId: d245ce73bbabd7c41922689a0b43c594
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 32}

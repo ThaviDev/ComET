@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 783edce05bbfa204ea066391f2fb4edc
+guid: 4da1b7a971c0b434794fe2f7e4374456
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -32,7 +32,7 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 0
+    spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
     spritePixelsToUnits: 25
@@ -78,8 +78,8 @@ ScriptedImporter:
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
-    generateModelPrefab: 0
-    generateAnimationClips: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   asepriteImporterSettings:
@@ -90,12 +90,12 @@ ScriptedImporter:
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
-    generateModelPrefab: 0
-    generateAnimationClips: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638643748741475730
+  platformSettingsDirtyTick: 638648534342396003
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,7 +119,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: NewAbilityIcons_Frame_0
+  - name: AbilityIcons - copia_Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 4
       width: 8
       height: 8
-    spriteID: ceaace7244b026542a2435c5be3b4785
+    spriteID: 46e330ba03d370d42993a83ac9d2786f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,7 +139,47 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: NewAbilityIcons_Frame_1
+  - name: AbilityIcons - copia_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 100
+      width: 8
+      height: 7
+    spriteID: 91526c731c0caa04590d1982c7c53b52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 20, y: 100}
+  - name: AbilityIcons - copia_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 19
+      width: 6
+      height: 8
+    spriteID: 06b1d2561236ca34bacff3c97a12759b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 36, y: 19}
+  - name: AbilityIcons - copia_Frame_3
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -150,7 +190,7 @@ ScriptedImporter:
       y: 20
       width: 8
       height: 8
-    spriteID: 0a4cd6169ed54654792601aa01828c2e
+    spriteID: bb64bc566f0795a41a898f3adf9bd369
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -159,7 +199,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 20}
-  - name: NewAbilityIcons_Frame_2
+  - name: AbilityIcons - copia_Frame_4
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -170,7 +210,7 @@ ScriptedImporter:
       y: 36
       width: 8
       height: 8
-    spriteID: 90630e09a423840468c4ef4c9bf51d99
+    spriteID: 021e548b0ec27884f83b96d870820fe7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -179,7 +219,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 36}
-  - name: NewAbilityIcons_Frame_3
+  - name: AbilityIcons - copia_Frame_5
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -190,7 +230,7 @@ ScriptedImporter:
       y: 52
       width: 8
       height: 8
-    spriteID: b8a73d000e215434d8508d2c0b856f0a
+    spriteID: 6bc5214e8c4e2a44da32d7346a02ce12
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -199,27 +239,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 52}
-  - name: NewAbilityIcons_Frame_4
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 20
-      width: 8
-      height: 7
-    spriteID: e9027884074085c43bc37734e7273a59
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 36, y: 20}
-  - name: NewAbilityIcons_Frame_5
+  - name: AbilityIcons - copia_Frame_6
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -230,7 +250,7 @@ ScriptedImporter:
       y: 68
       width: 8
       height: 8
-    spriteID: 6b71cfa25859cf1499b9f1a522b3d093
+    spriteID: 9cfe6fd99e6bc394686f75ad694d8c0d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -239,7 +259,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 68}
-  - name: NewAbilityIcons_Frame_6
+  - name: AbilityIcons - copia_Frame_7
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -250,7 +270,7 @@ ScriptedImporter:
       y: 84
       width: 8
       height: 8
-    spriteID: 3c51f82b713ed6546a2698638941ea28
+    spriteID: 86eaaf661d5371c42841e318440bda77
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -259,7 +279,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 84}
-  - name: NewAbilityIcons_Frame_7
+  - name: AbilityIcons - copia_Frame_8
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -270,7 +290,7 @@ ScriptedImporter:
       y: 100
       width: 8
       height: 8
-    spriteID: fe2937687deb7c842a44ce6a3d23b122
+    spriteID: 540456a1f7cbc9342a94c81850d072fa
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -279,7 +299,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 100}
-  - name: NewAbilityIcons_Frame_8
+  - name: AbilityIcons - copia_Frame_9
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -290,7 +310,7 @@ ScriptedImporter:
       y: 116
       width: 8
       height: 8
-    spriteID: f081c0d3d6b7b9b4784658e6780a7e7f
+    spriteID: 6769341c3cbe5b34892386e2b60a25ad
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -299,27 +319,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 116}
-  - name: NewAbilityIcons_Frame_9
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 20
-      y: 4
-      width: 8
-      height: 8
-    spriteID: 09f7670b2e270d5409afdfd6c71b7315
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 20, y: 4}
-  - name: NewAbilityIcons_Frame_10
+  - name: AbilityIcons - copia_Frame_10
     originalName: 
     pivot: {x: 0.5, y: -0.16666667}
     alignment: 9
@@ -330,7 +330,7 @@ ScriptedImporter:
       y: 35
       width: 8
       height: 6
-    spriteID: 59af7f194e523394ab06c4c088f4cf5e
+    spriteID: 1ca6906d99c78484aa881766e6c59e0d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -339,7 +339,47 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 36, y: 35}
-  - name: NewAbilityIcons_Frame_11
+  - name: AbilityIcons - copia_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 4
+      width: 8
+      height: 8
+    spriteID: 1364cfb0030bc8c498471e90fdf551a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 20, y: 4}
+  - name: AbilityIcons - copia_Frame_12
+    originalName: 
+    pivot: {x: 0.42857146, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 20
+      y: 115
+      width: 7
+      height: 8
+    spriteID: 4ddc1aaf0ae9e2e4fac4197db78ae002
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 20, y: 115}
+  - name: AbilityIcons - copia_Frame_13
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -350,7 +390,7 @@ ScriptedImporter:
       y: 20
       width: 8
       height: 8
-    spriteID: 70892729787a7614d8e38e6e75871b8d
+    spriteID: 7eb3b6873b5ed1a4f9feef5ad28b4e29
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -359,7 +399,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 20, y: 20}
-  - name: NewAbilityIcons_Frame_12
+  - name: AbilityIcons - copia_Frame_14
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -370,7 +410,7 @@ ScriptedImporter:
       y: 36
       width: 8
       height: 8
-    spriteID: b622eb2ae472f7d43812e819ebd67a4f
+    spriteID: 96ff2f3aaeabea1409d2d02338eeddd5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -379,7 +419,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 20, y: 36}
-  - name: NewAbilityIcons_Frame_13
+  - name: AbilityIcons - copia_Frame_15
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -390,7 +430,7 @@ ScriptedImporter:
       y: 52
       width: 8
       height: 8
-    spriteID: 6418f242a21c0f548bfaf24a7b577697
+    spriteID: d7d5bcd2c3811a841ab831d829b1580c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -399,7 +439,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 20, y: 52}
-  - name: NewAbilityIcons_Frame_14
+  - name: AbilityIcons - copia_Frame_16
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -410,7 +450,7 @@ ScriptedImporter:
       y: 68
       width: 8
       height: 8
-    spriteID: e5559463b99708c4e919c1f66e9e35c9
+    spriteID: 81ab7777432d68f48aed5bafa54490e2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -419,7 +459,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 20, y: 68}
-  - name: NewAbilityIcons_Frame_15
+  - name: AbilityIcons - copia_Frame_17
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -430,7 +470,7 @@ ScriptedImporter:
       y: 84
       width: 8
       height: 8
-    spriteID: d6439f7ffecd87c4fa4a66c6525f543e
+    spriteID: 6dcfb0d8360b87149951a89c80559cfb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -439,47 +479,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 20, y: 84}
-  - name: NewAbilityIcons_Frame_16
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 20
-      y: 100
-      width: 8
-      height: 8
-    spriteID: 131ad8ba5c2b9604da8a57734c1c3f9e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 20, y: 100}
-  - name: NewAbilityIcons_Frame_17
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 20
-      y: 116
-      width: 8
-      height: 8
-    spriteID: 0a1a882e034babd418e2c6af441086ab
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 20, y: 116}
-  - name: NewAbilityIcons_Frame_18
+  - name: AbilityIcons - copia_Frame_18
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -489,8 +489,8 @@ ScriptedImporter:
       x: 36
       y: 4
       width: 8
-      height: 8
-    spriteID: 38a587b275c0cb64cae4d113ebdf7256
+      height: 7
+    spriteID: b329c6f01dda5f3458a953ef0bcdee96
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -502,164 +502,164 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1869576332
-    name: NewAbilityIcons
+    guid: 1354946579
+    name: AbilityIcons - copia
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: NewAbilityIcons_Frame_0
+    - name: AbilityIcons - copia_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: ceaace7244b026542a2435c5be3b4785
-    - name: NewAbilityIcons_Frame_1
+      spriteId: 46e330ba03d370d42993a83ac9d2786f
+    - name: AbilityIcons - copia_Frame_1
       frameIndex: 1
       cellRect:
         x: 0
         y: 0
         width: 8
-        height: 8
-      spriteId: 0a4cd6169ed54654792601aa01828c2e
-    - name: NewAbilityIcons_Frame_2
+        height: 7
+      spriteId: 91526c731c0caa04590d1982c7c53b52
+    - name: AbilityIcons - copia_Frame_2
       frameIndex: 2
       cellRect:
-        x: 0
+        x: 1
         y: 0
-        width: 8
+        width: 6
         height: 8
-      spriteId: 90630e09a423840468c4ef4c9bf51d99
-    - name: NewAbilityIcons_Frame_3
+      spriteId: 06b1d2561236ca34bacff3c97a12759b
+    - name: AbilityIcons - copia_Frame_3
       frameIndex: 3
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: b8a73d000e215434d8508d2c0b856f0a
-    - name: NewAbilityIcons_Frame_4
+      spriteId: bb64bc566f0795a41a898f3adf9bd369
+    - name: AbilityIcons - copia_Frame_4
       frameIndex: 4
       cellRect:
         x: 0
         y: 0
         width: 8
-        height: 7
-      spriteId: e9027884074085c43bc37734e7273a59
-    - name: NewAbilityIcons_Frame_5
+        height: 8
+      spriteId: 021e548b0ec27884f83b96d870820fe7
+    - name: AbilityIcons - copia_Frame_5
       frameIndex: 5
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: 6b71cfa25859cf1499b9f1a522b3d093
-    - name: NewAbilityIcons_Frame_6
+      spriteId: 6bc5214e8c4e2a44da32d7346a02ce12
+    - name: AbilityIcons - copia_Frame_6
       frameIndex: 6
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: 3c51f82b713ed6546a2698638941ea28
-    - name: NewAbilityIcons_Frame_7
+      spriteId: 9cfe6fd99e6bc394686f75ad694d8c0d
+    - name: AbilityIcons - copia_Frame_7
       frameIndex: 7
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: fe2937687deb7c842a44ce6a3d23b122
-    - name: NewAbilityIcons_Frame_8
+      spriteId: 86eaaf661d5371c42841e318440bda77
+    - name: AbilityIcons - copia_Frame_8
       frameIndex: 8
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: f081c0d3d6b7b9b4784658e6780a7e7f
-    - name: NewAbilityIcons_Frame_9
+      spriteId: 540456a1f7cbc9342a94c81850d072fa
+    - name: AbilityIcons - copia_Frame_9
       frameIndex: 9
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: 09f7670b2e270d5409afdfd6c71b7315
-    - name: NewAbilityIcons_Frame_10
+      spriteId: 6769341c3cbe5b34892386e2b60a25ad
+    - name: AbilityIcons - copia_Frame_10
       frameIndex: 10
       cellRect:
         x: 0
         y: 1
         width: 8
         height: 6
-      spriteId: 59af7f194e523394ab06c4c088f4cf5e
-    - name: NewAbilityIcons_Frame_11
+      spriteId: 1ca6906d99c78484aa881766e6c59e0d
+    - name: AbilityIcons - copia_Frame_11
       frameIndex: 11
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: 70892729787a7614d8e38e6e75871b8d
-    - name: NewAbilityIcons_Frame_12
+      spriteId: 1364cfb0030bc8c498471e90fdf551a6
+    - name: AbilityIcons - copia_Frame_12
       frameIndex: 12
       cellRect:
-        x: 0
+        x: 1
         y: 0
-        width: 8
+        width: 7
         height: 8
-      spriteId: b622eb2ae472f7d43812e819ebd67a4f
-    - name: NewAbilityIcons_Frame_13
+      spriteId: 4ddc1aaf0ae9e2e4fac4197db78ae002
+    - name: AbilityIcons - copia_Frame_13
       frameIndex: 13
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: 6418f242a21c0f548bfaf24a7b577697
-    - name: NewAbilityIcons_Frame_14
+      spriteId: 7eb3b6873b5ed1a4f9feef5ad28b4e29
+    - name: AbilityIcons - copia_Frame_14
       frameIndex: 14
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: e5559463b99708c4e919c1f66e9e35c9
-    - name: NewAbilityIcons_Frame_15
+      spriteId: 96ff2f3aaeabea1409d2d02338eeddd5
+    - name: AbilityIcons - copia_Frame_15
       frameIndex: 15
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: d6439f7ffecd87c4fa4a66c6525f543e
-    - name: NewAbilityIcons_Frame_16
+      spriteId: d7d5bcd2c3811a841ab831d829b1580c
+    - name: AbilityIcons - copia_Frame_16
       frameIndex: 16
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: 131ad8ba5c2b9604da8a57734c1c3f9e
-    - name: NewAbilityIcons_Frame_17
+      spriteId: 81ab7777432d68f48aed5bafa54490e2
+    - name: AbilityIcons - copia_Frame_17
       frameIndex: 17
       cellRect:
         x: 0
         y: 0
         width: 8
         height: 8
-      spriteId: 0a1a882e034babd418e2c6af441086ab
-    - name: NewAbilityIcons_Frame_18
+      spriteId: 6dcfb0d8360b87149951a89c80559cfb
+    - name: AbilityIcons - copia_Frame_18
       frameIndex: 18
       cellRect:
         x: 0
         y: 0
         width: 8
-        height: 8
-      spriteId: 38a587b275c0cb64cae4d113ebdf7256
+        height: 7
+      spriteId: b329c6f01dda5f3458a953ef0bcdee96
     linkedCells: []
     parentIndex: -1
   platformSettings:

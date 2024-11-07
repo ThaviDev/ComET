@@ -39,4 +39,20 @@ public class PlayerStats : MonoBehaviour
     {
         
     }
+
+    public void AddCandy()
+    {
+        if (_candyStored < 9) 
+        {
+            _candyStored++;
+        }
+    }
+
+    public void AddPhonePiece()
+    {
+        if (_phonePieces < 3)
+        {
+            _phonePieces++;
+        }
+    }
 }

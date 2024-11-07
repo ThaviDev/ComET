@@ -22,6 +22,8 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] Transform _spawnPosHole;
     [SerializeField] Collider2D _myHoleTrigger;
 
+    [SerializeField] float _gravityScale;
+
 
     // Inputs
     bool _inptMoveRight;
@@ -159,19 +161,19 @@ public class PlayerMotor : MonoBehaviour
             rb.velocity = _vel;
             restartYVelocity = false;
         }
-        rb.gravityScale = 1f;
+        rb.gravityScale = _gravityScale;
 
         var _axisX = 0;
         // Detector de Inputs
         if (_inptMoveRight) { _axisX = 1; } else if (_inptMoveLeft) { _axisX = -1; } else { _axisX = 0; }
 
-        // Vector de direccion de movimiento
-        Vector3 mov = new Vector3(_axisX, 0f, 0f);
-
         // -- Moviendo el Rigid Body con MovePosition(MoveTowards) --
         /*rb.MovePosition(Vector3.MoveTowards
             (transform.position, new Vector3(transform.position.x, transform.position.y)
             + mov, _presentSpeed * Time.deltaTime));*/
+
+        // Vector de direccion de movimiento
+        Vector3 mov = new Vector3(_axisX, 0f, 0f);
 
         // Obtén la velocidad actual del Rigidbody
         Vector3 velocity = rb.velocity;

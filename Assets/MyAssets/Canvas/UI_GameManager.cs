@@ -14,8 +14,10 @@ public class UI_GameManager : MonoBehaviour
     [SerializeField] Slider _timeSliderSlow;
     [SerializeField] TMP_Text _candyText;
     [SerializeField] Slider _phoneSlider;
+    [SerializeField] Image[] _candyImages;
     [Header("Variables")]
     [SerializeField] Sprite[] _topIconSprites;
+    [SerializeField] Sprite _candyIcon;
     /* 0: Nada
      * 1: teletransportacion 2: Hipnosis 3: Llamar Felix
      * 4: Comer Dulce 5: Encontrar Pieza 6: Llamar a casa
@@ -29,10 +31,9 @@ public class UI_GameManager : MonoBehaviour
     {
         var _pEnergy = _pStats.GetEnergy;
 
-
-
         CalculateEnergyToBar(_pEnergy);
         CalculateCurrentTopIcon();
+        AddCandyIcons();
     }
 
     void CalculateCurrentTopIcon()
@@ -50,6 +51,7 @@ public class UI_GameManager : MonoBehaviour
         if (_isOnArea)
         {
             _topIcon.sprite = _topIconSprites[_iD_Icon];
+            _topIcon.SetNativeSize();
         }
         else
         {
@@ -76,6 +78,21 @@ public class UI_GameManager : MonoBehaviour
             }
 
             _energySliders[i].value = _barras[i];
+        }
+    }
+
+    void AddCandyIcons()
+    {
+        var _canAmnt = _pStats.GetCandyStored;
+        for (int i = 0; i < _candyImages.Length; i++)
+        {
+            if (_canAmnt > i)
+            {
+                _candyImages[i].sprite = _candyIcon;
+            } else
+            {
+                _candyImages[i].sprite = _topIconSprites[19];
+            }
         }
     }
 }
