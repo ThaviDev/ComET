@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
 {
+    [Header("Variables")]
     [SerializeField]
     private float _moveSpeedOG;
     [SerializeField]
@@ -16,14 +17,19 @@ public class PlayerMotor : MonoBehaviour
     /* Es el script que maneja los eventos de animacion cuando flota
     * Esta ubicado en los eventos de la animacion en el hijo que se encarga de la animacion
     * */
+
+    private float _energyUsedAtRate; // Energia gastada por segundo
+    [SerializeField] private float[] _energyUsedIn; // 0: Walking, 1: Running, 2: Floating
+    [SerializeField] private float _energyUsedAtAbility; // Energia gastada al usar una habilidad
+    [Header("References")]
     [SerializeField] MyInputManager _inputMan;
     bool _frame1Ability; // 
     private Vector3 _fallenHolePos;
     [SerializeField] Transform _spawnPosHole;
     [SerializeField] Collider2D _myHoleTrigger;
+    [SerializeField] PlayerStats _stats;
 
     [SerializeField] float _gravityScale;
-
 
     // Inputs
     bool _inptMoveRight;
@@ -61,15 +67,18 @@ public class PlayerMotor : MonoBehaviour
 
         //if (_inptInteract)
         //{
-            //_abilMot.ActivateAbility();
-            //print("Estoy Presionando Interact");
+        //_abilMot.ActivateAbility();
+        //print("Estoy Presionando Interact");
         //}
         //Logica de accion
         //_actionInput = Input.GetButton("Jump");
-        //Logica de correr
+
+        //Logica de correr ---------------------
+
         //Solo puede correr cuando se mueva y no este flotando
         if (_inptInteract && _ungroundedScript.isFloating == false && _isMoving)
         {
+
             _presentSpeed = _moveSpeedRun;
         }
         else
@@ -87,6 +96,7 @@ public class PlayerMotor : MonoBehaviour
         {
             _myHoleTrigger.enabled = false;
         }
+        _energyUsedAtRate -= Time.deltaTime;
     }
     bool isPlayerOnHole;
     void FixedUpdate()

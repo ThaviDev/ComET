@@ -88,6 +88,7 @@ public class AbilityMotor : MonoBehaviour
                 break;
             case 6: // Comer Dulce
                 print("Comer Dulce");
+
                 break;
             case 7: // Hipnosis Adultos
                 print("Hipnosis Adultos");

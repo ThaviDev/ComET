@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] int _pEnergy = 10000;
+    public int _pEnergy = 10000;
     [SerializeField] int _phonePieces;
     [SerializeField] int _candyStored;
     [SerializeField] float _timeToArrive;
