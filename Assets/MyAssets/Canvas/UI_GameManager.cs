@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -33,7 +34,8 @@ public class UI_GameManager : MonoBehaviour
 
         CalculateEnergyToBar(_pEnergy);
         CalculateCurrentTopIcon();
-        AddCandyIcons();
+        CheckCandyIcons();
+        CheckPhonePieces();
     }
 
     void CalculateCurrentTopIcon()
@@ -81,7 +83,7 @@ public class UI_GameManager : MonoBehaviour
         }
     }
 
-    void AddCandyIcons()
+    void CheckCandyIcons()
     {
         var _canAmnt = _pStats.GetCandyStored;
         for (int i = 0; i < _candyImages.Length; i++)
@@ -94,5 +96,19 @@ public class UI_GameManager : MonoBehaviour
                 _candyImages[i].sprite = _topIconSprites[19];
             }
         }
+    }
+
+    void CheckPhonePieces()
+    {
+        var _pieces = _pStats.GetPhonePieces;
+        var _count = 0;
+        for (int i = 0; i < _pieces.Length; i++)
+        {
+            if (_pieces[i] == true)
+            {
+                _count++;
+            }
+        }
+        _phoneSlider.value = _count;
     }
 }

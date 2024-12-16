@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CeilingTrigger : MonoBehaviour
+public class HoleCeilingTrigger : MonoBehaviour
 {
     [SerializeField] float _waitTime;
     Collider2D _collider;

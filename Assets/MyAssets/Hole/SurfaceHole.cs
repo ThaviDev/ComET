@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HoleMotor : MonoBehaviour
+public class SurfaceHole : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D col)
     {

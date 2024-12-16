@@ -232,7 +232,7 @@ public class PlayerMotor : MonoBehaviour
         // Si el jugador esta en hoyo, esta cayendo y la colision tiene cierto script, entonces podemos cambiar de caer a no caer
         // Incluso detonar el quitar energia
         // Podria tomarse en cuenta la posibilidad de contar el tiempo de vuelo para la cantidad de energia que se pierde
-        if (col.gameObject.transform.GetComponent<CeilingTrigger>())
+        if (col.gameObject.transform.GetComponent<HoleCeilingTrigger>())
         {
             // Detonar evento de regresar a la superficie
         }

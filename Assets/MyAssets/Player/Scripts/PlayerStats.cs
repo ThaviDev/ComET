@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public int _pEnergy = 10000;
-    [SerializeField] int _phonePieces;
+    [SerializeField] bool[] _phonePieces;
     [SerializeField] int _candyStored;
     [SerializeField] float _timeToArrive;
     [SerializeField] int[] _abilTimes;
@@ -14,7 +14,7 @@ public class PlayerStats : MonoBehaviour
     { 
         get { return _pEnergy; }
     }
-    public int GetPhonePieces
+    public bool[] GetPhonePieces
     {
         get { return _phonePieces; }
     }
@@ -32,7 +32,7 @@ public class PlayerStats : MonoBehaviour
     }
     void Start()
     {
-        
+        _phonePieces = new bool[3] { false, false, false };
     }
 
     void Update()
@@ -48,11 +48,12 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void AddPhonePiece()
+    public void AddPhonePiece(int _phoneID)
     {
-        if (_phonePieces < 3)
+        _phonePieces[_phoneID] = true;
+        /* if (_phonePieces < 3)
         {
             _phonePieces++;
-        }
+        }*/
     }
 }

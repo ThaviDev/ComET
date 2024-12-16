@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    [SerializeField] int _type;
-    [SerializeField] Sprite[] _myVisuals;
+    //[SerializeField] int _type;
+    //[SerializeField] Sprite[] _myVisuals;
+    protected SpriteRenderer _sr;
 
-    private void Start()
+    protected virtual void Start()
     {
-        SpriteRenderer _sr = GetComponent<SpriteRenderer>();
-        _sr.sprite = _myVisuals[_type];
+        _sr = GetComponent<SpriteRenderer>();
+        //_sr.sprite = _myVisuals[_type];
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        PlayerStats _stats;
-        if (_stats = col.transform.GetComponent<PlayerStats>())
+        PlayerStats _stats = col.transform.GetComponent<PlayerStats>();
+        if (_stats != null)
         {
-            _stats = col.transform.GetComponent<PlayerStats>();
             /*
             switch (_type) {
                 case 0:
@@ -28,6 +28,7 @@ public class PickUp : MonoBehaviour
                     _stats.AddPhonePiece();
                 break;
             }*/
+            /*
             if (_type == 0)
             {
                 _stats.AddCandy();
@@ -35,7 +36,14 @@ public class PickUp : MonoBehaviour
             {
                 _stats.AddPhonePiece();
             }
+            */
+            WasPickedUp(_stats);
             Destroy(gameObject);
         }
+    }
+
+    protected virtual void WasPickedUp(PlayerStats _pyr)
+    {
+
     }
 }
