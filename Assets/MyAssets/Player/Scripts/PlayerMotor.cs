@@ -13,7 +13,8 @@ public class PlayerMotor : MonoBehaviour
     private bool _isMoving;
     private Rigidbody2D rb;
     private AbilityMotor _abilMot;
-    private AnimFloatEvent _ungroundedScript;
+    //private AnimFloatEvent _ungroundedScript;
+    [SerializeField] BoolSCOB _isFloating;
     /* Es el script que maneja los eventos de animacion cuando flota
     * Esta ubicado en los eventos de la animacion en el hijo que se encarga de la animacion
     * */
@@ -41,7 +42,7 @@ public class PlayerMotor : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        _ungroundedScript = transform.GetChild(0).GetComponent<AnimFloatEvent>();
+        //_ungroundedScript = transform.GetChild(0).GetComponent<AnimFloatEvent>();
         _abilMot = gameObject.GetComponent<AbilityMotor>();
         MyGameManager.HoleFallEvent += PlayerFellInHole;
         MyGameManager.HoleClimbEvent += PlayerClimedHole;
@@ -55,12 +56,14 @@ public class PlayerMotor : MonoBehaviour
         _inptInteract = _inputMan.InteractButton;
 
         // Interaccion de abilidad
-        if (_ungroundedScript.isFloating && _frame1Ability == true)
+        //if (_ungroundedScript.isFloating && _frame1Ability == true)
+        if (_isFloating.SCOB_Value && _frame1Ability == true)
         {
             _frame1Ability = false;
             _abilMot.ActivateAbility();
         }
-        if (!_ungroundedScript.isFloating)
+        //if (!_ungroundedScript.isFloating)
+        if (!_isFloating.SCOB_Value)
         {
             _frame1Ability = true;
         }
@@ -76,7 +79,8 @@ public class PlayerMotor : MonoBehaviour
         //Logica de correr ---------------------
 
         //Solo puede correr cuando se mueva y no este flotando
-        if (_inptInteract && _ungroundedScript.isFloating == false && _isMoving)
+        //if (_inptInteract && _ungroundedScript.isFloating == false && _isMoving)
+        if (_inptInteract && _isFloating.SCOB_Value == false && _isMoving)
         {
 
             _presentSpeed = _moveSpeedRun;
@@ -89,7 +93,8 @@ public class PlayerMotor : MonoBehaviour
         //PD: Puede estar en el estado de correr mientras este quieto,
         //esto es para que no empieze actuar mientras esta cambiando de direccion
 
-        if (!_ungroundedScript.isFloating)
+        //if (!_ungroundedScript.isFloating)
+        if (!_isFloating.SCOB_Value)
         {
             _myHoleTrigger.enabled = true;
         } else
@@ -117,7 +122,8 @@ public class PlayerMotor : MonoBehaviour
     }
     private void PlayerInHole() {
         HorizontalMovement();
-        if (_ungroundedScript.isFloating)
+        //if (_ungroundedScript.isFloating)
+        if (_isFloating.SCOB_Value == true)
         {
             FreeMovement();
         }

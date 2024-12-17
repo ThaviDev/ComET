@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class AnimFloatEvent : MonoBehaviour
 {
-    public bool isFloating;
+    [SerializeField] BoolSCOB isFloating;
+    //public bool isFloating;
     //public bool isRunning;
     //public Animator animator;
     public void UngroundedEventStart() // Esta funcion es manejada por el aminator con un evento
     {
-        isFloating = true;
+        isFloating.SCOB_Value = true;
+        //isFloating = true;
     }
     public void UngroundedEventEnd() // Esta funcion es manejada por el aminator con un evento
     {
-        isFloating = false;
+        isFloating.SCOB_Value = false;
+        //isFloating = false;
     }
 }

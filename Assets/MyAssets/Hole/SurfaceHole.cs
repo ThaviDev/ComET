@@ -82,10 +82,11 @@ public class SurfaceHole : MonoBehaviour
 
     private Vector3 prevPoint;
     */
-    public float maxAttractionForce = 10f; // Fuerza máxima de atracción
-    public float minAttractionForce = 1f; // Fuerza mínima de atracción
-    public float horizontalRadius = 5f;   // Semieje horizontal del área ovalada
-    public float verticalRadius = 3f;     // Semieje vertical del área ovalada
+    [SerializeField] float maxAttractionForce = 10f; // Fuerza máxima de atracción
+    [SerializeField] float minAttractionForce = 1f; // Fuerza mínima de atracción
+    [SerializeField] float horizontalRadius = 5f;   // Semieje horizontal del área ovalada
+    [SerializeField] float verticalRadius = 3f;     // Semieje vertical del área ovalada
+    [SerializeField] BoolSCOB _isFloating;
 
     private void FixedUpdate()
     {
@@ -96,7 +97,7 @@ public class SurfaceHole : MonoBehaviour
         {
             // Obtener el Rigidbody2D del jugador
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-            if (rb != null)
+            if (rb != null && _isFloating.SCOB_Value == false)
             {
                 // Calcular la fuerza de atracción en función de la distancia
                 float distance = Vector2.Distance(transform.position, player.transform.position);

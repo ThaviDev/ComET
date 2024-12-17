@@ -9,7 +9,8 @@ public class PlayerAnimationManager : MonoBehaviour
     private SpriteRenderer _sprite;
     private PlayerMotor _playerControls;
     // Es el script que maneja los eventos de animacion cuando flota
-    private AnimFloatEvent _ungroundedScript;
+    //private AnimFloatEvent _ungroundedScript;
+    [SerializeField] BoolSCOB _isFloating;
 
     [SerializeField] MyInputManager _inputMan;
 
@@ -19,7 +20,7 @@ public class PlayerAnimationManager : MonoBehaviour
         var objAnimation = transform.GetChild(0);
         _anim = objAnimation.GetComponent<Animator>();
         _sprite = objAnimation.GetComponent<SpriteRenderer>();
-        _ungroundedScript = objAnimation.GetComponent<AnimFloatEvent>();
+        //_ungroundedScript = objAnimation.GetComponent<AnimFloatEvent>();
         _inputMan = _inputMan ?? FindObjectOfType<MyInputManager>();
     }
 
@@ -36,6 +37,8 @@ public class PlayerAnimationManager : MonoBehaviour
         if (_inptMoveUp) { _axisY = 1; } else if (_inptMoveDown) { _axisY = -1; } else { _axisY = 0; }
         if (_inptMoveRight) { _axisX = 1; } else if (_inptMoveLeft) { _axisX = -1; } else { _axisX = 0; }
 
+        print(_axisX + " " + _axisY);
+
         //var _axisX = _playerControls.GetAxisX();
         //var _axisY = _playerControls.GetAxisY();
         //var _actionInput = _playerControls.GetActionInput();
@@ -51,7 +54,8 @@ public class PlayerAnimationManager : MonoBehaviour
             _anim.SetBool("IsActing", false);
         }
 
-        if (_inptInteract && _ungroundedScript.isFloating == false && _anim.GetBool("IsMoving"))
+        //if (_inptInteract && _ungroundedScript.isFloating == false && _anim.GetBool("IsMoving"))
+        if (_inptInteract && _isFloating.SCOB_Value == false && _anim.GetBool("IsMoving"))
         {
             _anim.SetBool("IsRunning", true);
         }
