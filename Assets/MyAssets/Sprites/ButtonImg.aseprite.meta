@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 625f015e35e90f0418bb13dda877f509
+guid: 0e3dfef261d1b4e48a8e4033e20dd41c
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -32,10 +32,10 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 1
+    spriteMeshType: 0
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 25
+    spritePixelsToUnits: 5
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -71,31 +71,31 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
-    layerImportMode: 0
+    layerImportMode: 1
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
-    generateModelPrefab: 0
-    generateAnimationClips: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   asepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
-    layerImportMode: 0
+    layerImportMode: 1
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
-    generateModelPrefab: 0
-    generateAnimationClips: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638714412861494428
+  platformSettingsDirtyTick: 638715252473327922
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Layer 1_Frame_0
+  - name: ButtonImg
     originalName: 
-    pivot: {x: 0.56842107, y: -0.06481481}
+    pivot: {x: 0.5, y: -0.5666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 95
-      height: 108
-    spriteID: 38095023698aa784ca3f0b3dcb0fb0f2
+      width: 62
+      height: 30
+    spriteID: 39b709b0dfd74c347b0a8696cc7bad44
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,18 +139,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Layer 1_Frame_1
+  spriteSheetImportData:
+  - name: ButtonImg_0
     originalName: 
-    pivot: {x: 0.56842107, y: -0.07476635}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 6, y: 7, z: 6, w: 6}
     rect:
       serializedVersion: 2
       x: 4
-      y: 120
-      width: 95
-      height: 107
-    spriteID: 466fe65e13840b849be5fbf08bc167cb
+      y: 4
+      width: 62
+      height: 30
+    spriteID: 9696d00800900a5488defedd16a4cf0e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,32 +159,23 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 120}
-  spriteSheetImportData: []
+    uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: 1317222744
-    name: Layer 1
-    layerFlags: 3
+    guid: -1203373103
+    name: ButtonImg
+    layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Layer 1_Frame_0
+    - name: ButtonImg
       frameIndex: 0
       cellRect:
-        x: 10
-        y: 7
-        width: 95
-        height: 108
-      spriteId: 38095023698aa784ca3f0b3dcb0fb0f2
-    - name: Layer 1_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 10
-        y: 8
-        width: 95
-        height: 107
-      spriteId: 466fe65e13840b849be5fbf08bc167cb
+        x: 1
+        y: 17
+        width: 62
+        height: 30
+      spriteId: 39b709b0dfd74c347b0a8696cc7bad44
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -225,4 +217,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 128}
+  canvasSize: {x: 64, y: 64}
