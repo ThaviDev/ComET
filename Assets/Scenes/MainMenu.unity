@@ -876,7 +876,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.9998908
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -2945,7 +2945,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 19b23b2605f26e1419a2986309115119, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 083bf3780f0da2a45997087ca1ad2ade, type: 2}
 --- !u!4 &887811086
 Transform:
   m_ObjectHideFlags: 0
@@ -2970,7 +2970,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 887811084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472908adb5f8b6b4691a75e4fd776dda, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e2d6877540257540bab00399e0f359a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &896551283
