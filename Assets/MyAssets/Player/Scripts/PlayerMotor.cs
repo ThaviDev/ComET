@@ -82,7 +82,6 @@ public class PlayerMotor : MonoBehaviour
         //if (_inptInteract && _ungroundedScript.isFloating == false && _isMoving)
         if (_inptInteract && _isFloating.SCOB_Value == false && _isMoving)
         {
-
             _presentSpeed = _moveSpeedRun;
         }
         else
@@ -101,7 +100,33 @@ public class PlayerMotor : MonoBehaviour
         {
             _myHoleTrigger.enabled = false;
         }
-        _energyUsedAtRate -= Time.deltaTime;
+        //_energyUsedAtRate -= Time.deltaTime;
+
+        ChangeStatusForPlayerStatsClass();
+    }
+    void ChangeStatusForPlayerStatsClass()
+    {
+        if (_isMoving == false)
+        {
+            _stats.SetPlayerStatus(0);
+        }
+        else if (_presentSpeed == _moveSpeedOG)
+        {
+            _stats.SetPlayerStatus(1);
+        } else if (_presentSpeed == _moveSpeedRun)
+        {
+            _stats.SetPlayerStatus(2);
+        }
+        /*
+        else if (_presentSpeed <= 0.5f)
+        {
+            _stats.SetPlayerStatus(0);
+        }*/
+
+        if (_isFloating.SCOB_Value == true)
+        {
+            _stats.SetPlayerStatus(3);
+        }
     }
     bool isPlayerOnHole;
     void FixedUpdate()

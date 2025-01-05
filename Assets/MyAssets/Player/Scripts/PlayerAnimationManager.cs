@@ -37,7 +37,7 @@ public class PlayerAnimationManager : MonoBehaviour
         if (_inptMoveUp) { _axisY = 1; } else if (_inptMoveDown) { _axisY = -1; } else { _axisY = 0; }
         if (_inptMoveRight) { _axisX = 1; } else if (_inptMoveLeft) { _axisX = -1; } else { _axisX = 0; }
 
-        print(_axisX + " " + _axisY);
+        //print(_axisX + " " + _axisY);
 
         //var _axisX = _playerControls.GetAxisX();
         //var _axisY = _playerControls.GetAxisY();

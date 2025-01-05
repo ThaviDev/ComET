@@ -61,10 +61,10 @@ public class UI_GameManager : MonoBehaviour
         }
     }
 
-    void CalculateEnergyToBar(int _myEnergy)
+    void CalculateEnergyToBar(float _myEnergy)
     {
         int[] _barras = new int[4];
-        int _virtualEnergy = _myEnergy;
+        float _virtualEnergy = _myEnergy;
 
         for (int i = 0; i < _barras.Length; i++)
         {
@@ -75,7 +75,7 @@ public class UI_GameManager : MonoBehaviour
             }
             else
             {
-                _barras[i] = _virtualEnergy;
+                _barras[i] = (int)_virtualEnergy;
                 _virtualEnergy = 0;
             }
 

@@ -1266,7 +1266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &235512133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1323,7 +1323,7 @@ Transform:
   m_GameObject: {fileID: 235512132}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.66, y: 2.77, z: 0}
+  m_LocalPosition: {x: 4.268, y: 3.424, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2426,8 +2426,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.9998908
-    height: 1
+    width: 1
+    height: 0.9998905
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -2586,7 +2586,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &544936026
 GameObject:
   m_ObjectHideFlags: 0
@@ -8596,7 +8596,7 @@ MonoBehaviour:
   _inputMan: {fileID: 2095325624}
   _spawnPosHole: {fileID: 652376782}
   _myHoleTrigger: {fileID: 577285390}
-  _stats: {fileID: 0}
+  _stats: {fileID: 1962961712}
   _gravityScale: 0.5
 --- !u!114 &1962961708
 MonoBehaviour:
@@ -8674,6 +8674,9 @@ MonoBehaviour:
   _candyStored: 0
   _timeToArrive: 0
   _abilTimes: 
+  _energyDecreaseWalk: 20
+  _energyDecreaseRun: 50
+  _energyDecreaseActing: 75
 --- !u!4 &1963545106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1696935627197778666, guid: 2c3b8a6719c470d478120fc422948cdb, type: 3}
@@ -9703,7 +9706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9943769a418764cb4e3e2ec23a1fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitTime: 2
+  _waitTime: 0.8
 --- !u!1 &2119506532
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int _pEnergy = 10000;
+    public float _pEnergy = 10000;
     [SerializeField] bool[] _phonePieces;
     [SerializeField] int _candyStored;
     [SerializeField] float _timeToArrive;
     [SerializeField] int[] _abilTimes;
+    [SerializeField] float _energyDecreaseWalk;
+    [SerializeField] float _energyDecreaseRun;
+    [SerializeField] float _energyDecreaseActing;
+    int _pStatus; // 0 idle, 1 caminando, 2 corriendo, 3 actuando
+    public void SetPlayerStatus(int value)
+    {
+        _pStatus = value;
+    }
 
-    public int GetEnergy
+    public float GetEnergy
     { 
         get { return _pEnergy; }
     }
@@ -37,7 +45,27 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
-        
+        switch (_pStatus)
+        {
+            case 0:
+                print("no reducir energia");
+                break;
+            case 1:
+                print("reducir energia por caminar");
+                _pEnergy -= Time.deltaTime * _energyDecreaseWalk;
+                break;
+            case 2:
+                print("reducir energia por correr");
+                _pEnergy -= Time.deltaTime * _energyDecreaseRun;
+                break;
+            case 3:
+                print("reducir energia por flotar");
+                _pEnergy -= Time.deltaTime * _energyDecreaseActing;
+                break;
+            default:
+                Debug.LogWarning("No clear Player Status on PlayerStats()");
+                break;
+        }
     }
 
     public void AddCandy()
