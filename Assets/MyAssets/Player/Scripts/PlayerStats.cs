@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -13,11 +14,11 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] float _energyDecreaseRun;
     [SerializeField] float _energyDecreaseActing;
     int _pStatus; // 0 idle, 1 caminando, 2 corriendo, 3 actuando
+    PlayerMotor _pMotor;
     public void SetPlayerStatus(int value)
     {
         _pStatus = value;
     }
-
     public float GetEnergy
     { 
         get { return _pEnergy; }
@@ -41,8 +42,8 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         _phonePieces = new bool[3] { false, false, false };
+        PlayerMotor.ConsumeCandy += ConsumedCandy;
     }
-
     void Update()
     {
         switch (_pStatus)
@@ -62,9 +63,24 @@ public class PlayerStats : MonoBehaviour
                 print("reducir energia por flotar");
                 _pEnergy -= Time.deltaTime * _energyDecreaseActing;
                 break;
+            case 4:
+                print("reducir energia por flotar y caminar");
+                _pEnergy -= Time.deltaTime * (_energyDecreaseActing + _energyDecreaseWalk);
+                break;
             default:
                 Debug.LogWarning("No clear Player Status on PlayerStats()");
                 break;
+        }
+    }
+
+    // Suscrito al evento de PlayerMotor -> "ConsumeCandy"
+    void ConsumedCandy()
+    {
+        _candyStored--;
+        _pEnergy += 300;
+        if (_pEnergy > 10000)
+        {
+            _pEnergy = 10000;
         }
     }
 

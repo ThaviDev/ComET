@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,9 +20,6 @@ public class PlayerMotor : MonoBehaviour
     * Esta ubicado en los eventos de la animacion en el hijo que se encarga de la animacion
     * */
 
-    private float _energyUsedAtRate; // Energia gastada por segundo
-    [SerializeField] private float[] _energyUsedIn; // 0: Walking, 1: Running, 2: Floating
-    [SerializeField] private float _energyUsedAtAbility; // Energia gastada al usar una habilidad
     [Header("References")]
     [SerializeField] MyInputManager _inputMan;
     bool _frame1Ability; // 
@@ -31,6 +29,8 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] PlayerStats _stats;
 
     [SerializeField] float _gravityScale;
+
+    public static event Action ConsumeCandy;
 
     // Inputs
     bool _inptMoveRight;
@@ -68,14 +68,6 @@ public class PlayerMotor : MonoBehaviour
             _frame1Ability = true;
         }
 
-        //if (_inptInteract)
-        //{
-        //_abilMot.ActivateAbility();
-        //print("Estoy Presionando Interact");
-        //}
-        //Logica de accion
-        //_actionInput = Input.GetButton("Jump");
-
         //Logica de correr ---------------------
 
         //Solo puede correr cuando se mueva y no este flotando
@@ -106,27 +98,22 @@ public class PlayerMotor : MonoBehaviour
     }
     void ChangeStatusForPlayerStatsClass()
     {
+        int pStatus = 0;
         if (_isMoving == false)
         {
-            _stats.SetPlayerStatus(0);
-        }
-        else if (_presentSpeed == _moveSpeedOG)
+            pStatus = 0;
+        } else if (_presentSpeed == _moveSpeedOG)
         {
-            _stats.SetPlayerStatus(1);
+            pStatus = 1;
         } else if (_presentSpeed == _moveSpeedRun)
         {
-            _stats.SetPlayerStatus(2);
+            pStatus = 2;
         }
-        /*
-        else if (_presentSpeed <= 0.5f)
-        {
-            _stats.SetPlayerStatus(0);
-        }*/
-
         if (_isFloating.SCOB_Value == true)
         {
-            _stats.SetPlayerStatus(3);
+            pStatus += 3;
         }
+        _stats.SetPlayerStatus(pStatus);
     }
     bool isPlayerOnHole;
     void FixedUpdate()
@@ -255,6 +242,15 @@ public class PlayerMotor : MonoBehaviour
     {
         transform.position = _fallenHolePos;
         isPlayerOnHole = false;
+    }
+
+    // Detona el evento de el consumir dulce
+    public void ColectedCandyDetonator()
+    {
+        if (ConsumeCandy != null)
+        {
+            ConsumeCandy.Invoke();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)

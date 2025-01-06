@@ -6,6 +6,7 @@ public class AbilityMotor : MonoBehaviour
 {
     [SerializeField] AreaAbilDetection _myAreaDet;
     [SerializeField] PlayerMotor _playerMotor;
+    [SerializeField] PlayerStats _playerStats;
     /*
     [Header("GameObjects que aparecen en ciertas habilidades:")]
     [SerializeField] List<GameObject> _abilObj; */
@@ -87,8 +88,12 @@ public class AbilityMotor : MonoBehaviour
                 print("Ubicar Pieza");
                 break;
             case 6: // Comer Dulce
-                print("Comer Dulce");
-
+                if (_playerStats.GetCandyStored > 0)
+                {
+                    _playerMotor.ColectedCandyDetonator();
+                }
+                //_playerStats
+                //print("Comer Dulce");
                 break;
             case 7: // Hipnosis Adultos
                 print("Hipnosis Adultos");
